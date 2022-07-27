@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.scss">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  
+</head>
+
+<body>
+
+  <header>
+
+    <div class="header-left">
+
+    <img src="images/logo.svg" class="logo_">
+
+    <!-- <li> <a href="#">Features</a> </li> -->
+     <!-- <li> <a href="#">Company</a> </li> -->
+
+     <ul>
+
+     <div class="dropdown">
+      <a class="dropbtn" onclick="myFunction()"> Features
+        <img src="images/icon-arrow-up.svg" alt="arrow_up">
+      </a> 
+      <div class="dropdown-content" id="myDropdown">
+        <a href="#"> <img src="images/icon-todo.svg" alt=""> Todo List </a>
+        <a href="#"> <img src="images/icon-calendar.svg" alt=""> Calandar</a>
+        <a href="#"> <img src="images/icon-reminders.svg" alt=""> Reminders</a>
+        <a href="#"> <img src="images/icon-planning.svg" alt=""> Planning </a>
+      </div>
+      </div> 
+
+      <div class="dropdown">
+        <a class="dropbtn" onclick="myFunction()"> Company
+          <img src="images/icon-arrow-up.svg" alt="arrow_up">
+        </a> 
+        <div class="dropdown-content" id="myDropdown">
+          <a href="#"> History </a>
+          <a href="#"> Our Team </a>
+          <a href="#"> Blog </a>
+        </div>
+        </div>
+
+        <a href="#">Careers</a> 
+
+        <a href="#">About</a> 
+
+        </ul>
+
+        <!--
+
+        <div class="dropdown">
+          <a href="#" data-toggle="dropdown"> First Menu <i class="icon-arrow"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="dropdown">
+          <a href="#" data-toggle="dropdown"> Second Menu <i class="icon-arrow"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+      -->
+
+      <!-- <div class="dropdown-container">
+
+        <div class="dropdown-toggle click-dropdown">
+          Features
+        </div>
+
+        <div class="dropdown-menu">
+
+          <ul>
+
+          <li> <a href="#"> <img src="images/icon-todo.svg" alt=""> Todo List </a> </li>
+          <li> <a href="#"> <img src="images/icon-calendar.svg" alt=""> Calandar</a> </li>
+          <li> <a href="#"> <img src="images/icon-reminders.svg" alt=""> Reminders</a> </li>
+          <li> <a href="#"> <img src="images/icon-planning.svg" alt=""> Planning </a> </li>
+
+          </ul>
+
+        </div>
+
+      </div> -->
+
+    </div>
+
+    <div class="header-right">
+
+      <ul>
+
+      <a href="#">Login</a> 
+      <a href="#" class="bt1">Register</a> 
+
+      </ul>
+  
+    </div>
+
+  </header>
+
+  <div class="container_1">
+
+  <div class="container_2">
+
+  <h1> <span> Make </span> <br> <span> remote work </span> </h1>
+
+  <p> 
+      <span> Get your team in sync, no matter your location. <br> </span>
+      <span> Streamline processes, create team rituals, and <br> </span>
+      <span> watch productivity soar. </span> 
+  </p>
+
+  <a href="#" class="bt2">Learn more</a>
+
+    <div class="wrapper_1">
+
+    <div> <img src="images/client-databiz.svg"> </div>
+    <div> <img src="images/client-audiophile.svg"> </div>
+    <div> <img src="images/client-meet.svg"> </div>
+    <div> <img src="images/client-maker.svg"> </div>
+
+    </div>
+
+    </div>
+
+    <div class="container_3">
+
+    <img src="images/image-hero-desktop.png" class="pic_1">
+
+    </div>
+
+  </div>
+
+  <footer>
+
+  </footer>
+
+  <script>
+
+    /*
+
+    // Get all the dropdown from document
+document.querySelectorAll('.dropdown-toggle').forEach(dropDownFunc);
+
+// Dropdown Open and Close function
+function dropDownFunc(dropDown) {
+    console.log(dropDown.classList.contains('click-dropdown'));
+
+    if(dropDown.classList.contains('click-dropdown') === true){
+        dropDown.addEventListener('click', function (e) {
+            e.preventDefault();        
+    
+            if (this.nextElementSibling.classList.contains('dropdown-active') === true) {
+                // Close the clicked dropdown
+                this.parentElement.classList.remove('dropdown-open');
+                this.nextElementSibling.classList.remove('dropdown-active');
+    
+            } else {
+                // Close the opend dropdown
+                closeDropdown();
+    
+                // add the open and active class(Opening the DropDown)
+                this.parentElement.classList.add('dropdown-open');
+                this.nextElementSibling.classList.add('dropdown-active');
+            }
+        });
+    }
+
+    if(dropDown.classList.contains('hover-dropdown') === true){
+
+        dropDown.onmouseover  =  dropDown.onmouseout = dropdownHover;
+
+        function dropdownHover(e){
+            if(e.type == 'mouseover'){
+                // Close the opend dropdown
+                closeDropdown();
+
+                // add the open and active class(Opening the DropDown)
+                this.parentElement.classList.add('dropdown-open');
+                this.nextElementSibling.classList.add('dropdown-active');
+                
+            }
+
+            // if(e.type == 'mouseout'){
+            //     // close the dropdown after user leave the list
+            //     e.target.nextElementSibling.onmouseleave = closeDropdown;
+            // }
+        }
+    }
+
+};
+
+*/
+
+/* 
+
+// Listen to the doc click
+window.addEventListener('click', function (e) {
+
+    // Close the menu if click happen outside menu
+    if (e.target.closest('.dropdown-container') === null) {
+        // Close the opend dropdown
+        closeDropdown();
+    }
+
+});
+
+// Close the openend Dropdowns
+function closeDropdown() { 
+    console.log('run');
+    
+    // remove the open and active class from other opened Dropdown (Closing the opend DropDown)
+    document.querySelectorAll('.dropdown-container').forEach(function (container) { 
+        container.classList.remove('dropdown-open')
+    });
+
+    document.querySelectorAll('.dropdown-menu').forEach(function (menu) { 
+        menu.classList.remove('dropdown-active');
+    });
+}
+
+// close the dropdown on mouse out from the dropdown list
+document.querySelectorAll('.dropdown-menu').forEach(function (dropDownList) { 
+    // close the dropdown after user leave the list
+    dropDownList.onmouseleave = closeDropdown;
+});
+
+  // Dropdown Menu
+/* var dropdown = document.querySelectorAll('.dropdown');
+var dropdownArray = Array.prototype.slice.call(dropdown,0);
+dropdownArray.forEach(function(el){
+	var button = el.querySelector('a[data-toggle="dropdown"]'),
+			menu = el.querySelector('.dropdown-menu'),
+			arrow = button.querySelector('i.icon-arrow');
+
+	button.onclick = function(event) {
+		if(!menu.hasClass('show')) {
+			menu.classList.add('show');
+			menu.classList.remove('hide');
+			arrow.classList.add('open');
+			arrow.classList.remove('close');
+			event.preventDefault();
+		}
+		else {
+			menu.classList.remove('show');
+			menu.classList.add('hide');
+			arrow.classList.remove('open');
+			arrow.classList.add('close');
+			event.preventDefault();
+		}
+	};
+}) 
+
+
+Element.prototype.hasClass = function(className) {
+    return this.className && new RegExp("(^|\\s)" + className + "(\\s|$)").test(this.className);
+}; */
+
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(e) {
+      if (!e.target.matches('.dropbtn')) {
+      var myDropdown = document.getElementById("myDropdown");
+        if (myDropdown.classList.contains('show')) {
+          myDropdown.classList.remove('show');
+        }
+      }
+    } 
+
+
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(e) {
+      if (!e.target.matches('.dropbtn')) {
+      var myDropdown = document.getElementById("myDropdown");
+        if (myDropdown.classList.contains('show')) {
+          myDropdown.classList.remove('show');
+        }
+      }
+    } 
+
+    </script>
+
+</body>
+
+</html>
